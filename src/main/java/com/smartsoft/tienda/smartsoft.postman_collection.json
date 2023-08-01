@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "0faa36fe-c465-42a6-8373-868092465145",
+		"name": "smartsoft",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24394053"
+	},
+	"item": [
+		{
+			"name": "guardar cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Yeison\",\r\n    \"apellido\": \"Martinez\",\r\n    \"direccion\": \"Carrera 93 D 65 - 27 sur\",\r\n    \"fechaNacimiento\": \"1995-10-15\",\r\n    \"telefono\" : \"3015894913\",\r\n    \"email\": \"maykenm7@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/clientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Jabón\",\r\n    \"precio\": 2500,\r\n    \"stock\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar factura",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"clienteId\":1,\r\n    \"fecha\":  \"2023-07-31\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/facturas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"facturas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "guardar detalle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \r\n    \"facturaId\": 1,\r\n    \"productoId\": 1,\r\n    \"cantidad\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/detalle",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"detalle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar cliente",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/clientes/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar producto",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/productos/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"productos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar factura",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/facturas/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"facturas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "consultar detalle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/detalles/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"detalles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
